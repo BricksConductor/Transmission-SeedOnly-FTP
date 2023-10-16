@@ -9,4 +9,4 @@ RUN sed -i 's/"rpc-whitelist": "127.0.0.1"/"rpc-whitelist": "*.*.*.*"/g' /etc/tr
 
 EXPOSE 3000 7000 42069/tcp 42069/udp 5489/tcp 5489/udp 9091 51413/tcp 51413/udp
 
-CMD ["transmission-daemon","-m","-f", "-g", "/etc/transmission-daemon/", "-u", "INSERT_USERNAME", "-v", "INSERT_PASSWORD"]
+CMD ["transmission-daemon","-m","-f", "-c", "/etc/clooder/cloodist/torrents", "-g", "/etc/transmission-daemon/", "-u", "INSERT_USERNAME", "-v", "INSERT_PASSWORD"]
